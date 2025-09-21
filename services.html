@@ -1,0 +1,118 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>University Website Design - Easy Tutorials</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png"></a>
+            <div class="nav-links" id="navLinks">  
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+            <h1>Our services</h1>
+    </section>
+    
+    
+<!---------- services ----------->
+    
+    <section class="services">
+        <h1>Services We Offer</h1>
+        <p>We offer a wide range of services that will meet every need.</p>
+        <div class="row">
+            <div class="services-col">
+                <h3>Project Management Consultation (PMC)</h3>
+                <p>Our PMC services help you manage every stage of construction with ease and transparency. We ensure your dream project is built efficiently, cost-effectively, and stress-free.</p>
+            </div>
+            <div class="services-col">
+                <h3>Turnkey Projects</h3>
+                <p>We deliver end-to-end solutions, managing every stage from design to handover. With our turnkey approach, you receive a ready-to-use space tailored to your needs.</p>
+            </div>
+            <div class="services-col">
+                <h3>Renovation Projects</h3>
+                <p>Transform your old space into something fresh, functional, and stylish. From minor upgrades to complete makeovers, we make renovations simple and stress-free.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="services-col">
+                <h3>Commercial Construction</h3>
+                <p>From offices to retail outlets, we build spaces that help your business grow. Every project is crafted to be practical, welcoming, and built to last.</p>
+            </div>
+            <div class="services-col">
+                <h3>Industrial Projects</h3>
+                <p>With proven experience in industrial construction, we deliver facilities built for efficiency and long-term performance. Our projects meet the highest standards of safety, durability, and scalability.</p>
+            </div>
+            <div class="services-col">
+                <h3>Resorts</h3>
+                <p>We design and construct resorts that combine luxury, comfort, and functionality. Every project is crafted to deliver world-class hospitality and lasting value.</p>
+            </div>
+        </div>
+    </section>
+    
+<!---------- Facilities --------
+    
+    <section class="facility">
+        <h1>Our Facilities</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="row">
+                <div class="facility-col">
+                    <img src="images/library.png">
+                    <h3>World Class Library</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla.</p>
+                </div>
+                <div class="facility-col">
+                    <img src="images/basketball.png">
+                    <h3>Largest Play Ground</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla.</p>
+                </div>
+                <div class="facility-col">
+                    <img src="images/cafeteria.png">
+                    <h3>Tasty and Healthy Food</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla.</p>
+                </div>
+            </div>
+    </section>
+    
+-->
+<!-------- footer ---------->
+
+<section class="footer">
+        <h4>We would like to build your dream house.</h4>
+        <div class="icons">
+            <a href="https://www.facebook.com/hyhaus.in/"><i class="fa fa-facebook"></i></a>
+            <a href="https://x.com/hyhaus_official"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/hyhaus.in/"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/kristal-constructions/"><i class="fa fa-linkedin"></i></a>
+            
+        </div>
+        <a href="https://www.linkedin.com/in/srirangaabakari/" class="footer-link"><p>made with <i class="fa fa-heart-o"></i> by Sriranga Abakari</p></a>
+</section> 
+  
+  
+<!----JavaScript for toggle menu---->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script>  
+    
+</body>
+</html>    

@@ -1,0 +1,280 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hyhaus Builders Website</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+    <section class="header">
+        
+        <nav>
+            <a href="index.html"><img src="images/logo.png"></a>
+            <div class="nav-links" id="navLinks">  
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        
+        <div class="text-box">
+            <h1>Your Dream, We Build</h1>
+            <p>We specialize in capturing dreams.<br>We also specialize in building designs.<br>Naturally, we build dream houses.</p>
+            <a href="contact.html" class="hero-btn">Contact Us</a>
+        </div>
+    </section>
+    
+<!---------- services ----------->
+    
+    <section class="services">
+        <h1>Services We Offer</h1>
+        <p>We offer a wide range of services that will meet every need.</p>
+        <div class="row">
+            <div class="services-col">
+                <h3>Project Management Consultation (PMC)</h3>
+                <p>Our PMC services help you manage every stage of construction with ease and transparency. We ensure your dream project is built efficiently, cost-effectively, and stress-free.</p>
+            </div>
+            <div class="services-col">
+                <h3>Turnkey Projects</h3>
+                <p>We deliver end-to-end solutions, managing every stage from design to handover. With our turnkey approach, you receive a ready-to-use space tailored to your needs.</p>
+            </div>
+            <div class="services-col">
+                <h3>Renovation Projects</h3>
+                <p>Transform your old space into something fresh, functional, and stylish. From minor upgrades to complete makeovers, we make renovations simple and stress-free.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="services-col">
+                <h3>Commercial Construction</h3>
+                <p>From offices to retail outlets, we build spaces that help your business grow. Every project is crafted to be practical, welcoming, and built to last.</p>
+            </div>
+            <div class="services-col">
+                <h3>Industrial Projects</h3>
+                <p>With proven experience in industrial construction, we deliver facilities built for efficiency and long-term performance. Our projects meet the highest standards of safety, durability, and scalability.</p>
+            </div>
+            <div class="services-col">
+                <h3>Hospitality Projects</h3>
+                <p>We design and construct hospitality projects that combine luxury, comfort, and functionality. Every project is crafted to deliver world-class hospitality and lasting value.</p>
+            </div>
+        </div>
+    </section>
+    
+<!---------- Projects ---------->
+    
+    <section class="campus">
+    <h1>Our Projects</h1>
+    <p>Here are some of our projects.</p>
+
+    <div class="carousel-container-arrow">
+        <button class="arrow left" onclick="scrollCarousel(-1)"><i class="fa fa-chevron-left"></i></button>
+
+        <div class="carousel-arrow" id="projectCarousel">
+            <div class="campus-col">
+                <img src="images/allianceuniversity.jpg">
+                <div class="layer"><h3>Alliance University</h3></div>
+            </div>
+            <div class="campus-col">
+                <img src="images/saidham.jpg">
+                <div class="layer"><h3>Sai Dham</h3></div>
+            </div>
+            <div class="campus-col">
+                <img src="images/krishna.jpg">
+                <div class="layer"><h3>Krishna's Home</h3></div>
+            </div>
+            <div class="campus-col">
+                <img src="images/pushpahasa.png">
+                <div class="layer"><h3>Pushpahasa</h3></div>
+            </div>            
+        </div>
+
+        <button class="arrow right" onclick="scrollCarousel(1)"><i class="fa fa-chevron-right"></i></button>
+    </div>
+</section>
+    
+<!---------- Facilities ---------->
+<!--    
+    <section class="facility">
+        <h1>Our Facilities</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="row">
+                <div class="facility-col">
+                    <img src="images/library.png">
+                    <h3>World Class Library</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla.</p>
+                </div>
+                <div class="facility-col">
+                    <img src="images/basketball.png">
+                    <h3>Largest Play Ground</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla.</p>
+                </div>
+                <div class="facility-col">
+                    <img src="images/cafeteria.png">
+                    <h3>Tasty and Healthy Food</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla.</p>
+                </div>
+            </div>
+    </section>
+-->    
+    
+<!---------- testimonials ---------->
+    
+    <section class="testimonials">
+    <h1>What Our Clients Say</h1>
+    <p>Hear From Those Who Built Their Dreams With Us.</p>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            
+            <div class="testimonial-col">
+                <img src="images/kirandesai.png">
+                <div>
+                    <p>Team of great professionals with who can easily turn your dream into reality. Be it construction of dream home or mind-blowing interior, this is the place for one to explore and trust them to deliver high quality projects in the committed timeline</p>
+                    <h3>Kiran Desai</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+            </div>
+
+            <div class="testimonial-col">
+                <img src="images/sriranga.png">
+                <div>
+                    <p>First of all, great customer service!!! The fact that everyone here is young and talented makes me believe in their success!!! Jaw-dropping ambiance!!!🤯🤯</p>
+                    <h3>Sriranga Abakari</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+            </div>
+
+            <div class="testimonial-col">
+                <img src="images/harshithchirag.png">
+                <div>
+                    <p>Maybe young but they are certainly not inexperienced. The projects which they do are highly remarkable, successful and are built in the vision of their customers.</p>
+                    <h3>Harshith chirag</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+            </div>
+
+            <div class="testimonial-col">
+                <img src="images/darshans.png">
+                <div>
+                    <p>Great bunch of Engineers with Innovative ideas and expertise in Planning,Structural Design and Construction with commendable dedication and professionalism . Strongly recommend them for their quality services.</p>
+                    <h3>Darshan S</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+
+            <div class="testimonial-col">
+                <img src="images/nameeth.png">
+                <div>
+                    <p>Krishna Prasad and his team at Hyhaus make sure customer is satisfied and quality is assured. I would say they are one of the trustworthy builders in the city. Team is hardworking and always up for innovation and implementation of modern technology in construction business.</p>
+                    <h3>Nameeth Ashok</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+
+            <!-- Duplicate slides for continuous effect -->
+            <div class="testimonial-col">
+                <img src="images/anandkumar.png">
+                <div>
+                    <p>Very professional and knowledgeable persons firm. Appreciate their competency in understanding the clients requirements and concerns. Provide better solutions.</p>
+                    <h3>Anand Kumar</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+    
+<!------ Call To Action ------>
+
+<section class="cta">
+    
+       <h1>Contact us NOW to start building your dream house.</h1>
+        <a href="https://www.instagram.com/hyhaus.in/" class="hero-btn">INSTAGRAM</a>
+
+</section>
+
+<!-------- footer ---------->
+
+<section class="footer">
+        <h4>We would like to build your dream house.</h4>
+        <div class="icons">
+            <a href="https://www.facebook.com/hyhaus.in/"><i class="fa fa-facebook"></i></a>
+            <a href="https://x.com/hyhaus_official"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/hyhaus.in/"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/kristal-constructions/"><i class="fa fa-linkedin"></i></a>
+            
+        </div>
+        <a href="https://www.linkedin.com/in/srirangaabakari/" class="footer-link"><p>made with <i class="fa fa-heart-o"></i> by Sriranga Abakari</p></a>
+</section>    
+  
+  
+<!----JavaScript for toggle menu---->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+
+    let index = 0;
+
+function scrollCarousel(direction) {
+    const carousel = document.getElementById('projectCarousel');
+    const cardWidth = carousel.querySelector('.campus-col').offsetWidth + 30; // card + margin
+    const visibleCards = Math.floor(carousel.parentElement.offsetWidth / cardWidth);
+    const totalCards = carousel.children.length;
+
+    index += direction;
+
+    // limit movement
+    if (index < 0) index = 0;
+    if (index > totalCards - visibleCards) index = totalCards - visibleCards;
+
+    carousel.style.transform = `translateX(${-index * cardWidth}px)`;
+}
+</script> 
+    
+</body>
+</html>
+
+
+
+
+
+
+

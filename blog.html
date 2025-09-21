@@ -1,0 +1,121 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story - Hyhaus</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png" alt="Hyhaus Logo"></a>
+            <div class="nav-links" id="navLinks">  
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+            <h1>Stories from Our Lives</h1>
+    </section>
+    
+<!---------- Blog Page Content ---------->
+    
+<section class="blog-content">
+    <div class="row">
+        <div class="blog-left">
+            
+            <h2>When Two Paths Finally Crossed</h2>
+            
+            <img src="images/aboutstory.jpg" alt="Our Journey">
+            <h3>Parallel Lives at MIT Manipal</h3>
+            <p>
+                Life sometimes writes the most unexpected stories. Two students once walked the same corridors of MIT Manipal, studying for their <strong>MS in Engineering</strong>. 
+                They shared the same campus, the same classrooms, and even the same city — yet, they never once crossed paths there.
+            </p>
+            
+            <h3>Destiny in Bangalore</h3>
+            <p>
+                Years later, after graduation, both had settled down in <strong>Bangalore</strong>. That’s when destiny intervened, not through coincidence, 
+                but through family. Their families were exploring arranged marriage matches and soon realized that their profiles fit together perfectly, 
+                almost like a <em>jigsaw puzzle</em>.
+            </p>
+            
+            <h3>The Extrovert</h3>
+            <p>
+                He was the extrovert: friendly, quick to make connections, and someone who never fussed over small details. 
+                With an unmatched mind for <strong>floor plans</strong>, there was nobody better at designing functional and practical layouts. 
+                His fashion sense was okay — but his real charm was in how he could get things done with ease.
+            </p>
+            
+            <h3>The Introvert</h3>
+            <p>
+                She, on the other hand, was an introvert. Quiet, thoughtful, and known for having just one best friend throughout her life. 
+                She had a <strong>great sense of fashion</strong> and was admired for her impeccable <strong>attention to detail</strong>. 
+                If something needed perfection, she was the one who would spot what others missed.
+            </p>
+            
+            <h3>Complementary Strengths</h3>
+            <p>
+                At first glance, they seemed very different. But when they came together, those differences became their biggest strengths. 
+                He drew bold ideas and big plans, while she refined them with precision. Together, they became a team where one’s vision was balanced 
+                by the other’s eye for detail.
+            </p>
+            
+            <h3>Marriage and a New Beginning</h3>
+            <p>
+                Marriage was just the beginning. With their engineering backgrounds and complementary personalities, they took a bigger leap — 
+                they started their very own <strong>construction company</strong>. What began as two families bringing them together, grew into 
+                a partnership that builds not just homes and buildings, but a shared dream and legacy.
+            </p>
+            
+            <div class="comment-box">
+                <h3>Leave a comment</h3>
+                <form class="comment-form">
+                    <input type="text" placeholder="Enter Name">
+                    <input type="email" placeholder="Enter email">
+                    <textarea rows="5" placeholder="Your Comment"></textarea>
+                    <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
+                </form>
+            </div>
+        </div>
+        
+         
+    </div>
+</section>
+    
+<!-------- footer ---------->
+<section class="footer">
+    <h4>We would like to build your dream house.</h4>
+    <div class="icons">
+        <a href="https://www.facebook.com/hyhaus.in/"><i class="fa fa-facebook"></i></a>
+        <a href="https://x.com/hyhaus_official"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.instagram.com/hyhaus.in/"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/kristal-constructions/"><i class="fa fa-linkedin"></i></a>
+    </div>
+    <a href="https://www.linkedin.com/in/srirangaabakari/" class="footer-link">
+        <p>made with <i class="fa fa-heart-o"></i> by Sriranga Abakari</p>
+    </a>
+</section> 
+  
+<!----JavaScript for toggle menu---->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script> 
+    
+</body>
+</html>
