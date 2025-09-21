@@ -61,12 +61,13 @@
                 </div>
                 <div class="contact-col">
                     <form id="contactForm">
-                        <input type="text" name="name" placeholder="Enter your name" required>
-                        <input type="email" name="email" placeholder="Enter email address" required>
-                        <input type="text" name="subject" placeholder="Enter your subject" required>
-                        <textarea rows="8" name="message" placeholder="Message" required></textarea>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        <input type="email" id="email" name="email" placeholder="Enter email address" required>
+                        <input type="text" id="subject" name="subject" placeholder="Enter your subject" required>
+                        <textarea rows="8" id="message" name="message" placeholder="Message" required></textarea>
                         <button type="submit" class="hero-btn red-btn">Send Message</button>
                     </form>
+
                 </div>
 
             </div>
@@ -99,28 +100,43 @@
         navLinks.style.right = "-200px";
     }
 
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+    document.addEventListener("DOMContentLoaded", function() {
 
-    const name = encodeURIComponent(document.getElementById("name").value);
-    const email = encodeURIComponent(document.getElementById("email").value);
-    const subject = encodeURIComponent(document.getElementById("subject").value);
-    const message = encodeURIComponent(document.getElementById("message").value);
+    // Menu toggle
+    var navLinks = document.getElementById("navLinks");
+    window.showMenu = function() { navLinks.style.right = "0"; }
+    window.hideMenu = function() { navLinks.style.right = "-200px"; }
 
-    const whatsappNumber = "919972966961"; // Your number
-    const text = `📩 New Contact Form Submission\n\n👤 Name: ${name}\n📧 Email: ${email}\n📝 Subject: ${subject}\n💬 Message: ${message}`;
+    // WhatsApp form submission
+    const form = document.getElementById("contactForm");
+    if (form) {
+        form.addEventListener("submit", function(e) {
+            e.preventDefault(); // prevent default submission
 
-    // Detect mobile vs desktop
-    const url = /Mobi|Android/i.test(navigator.userAgent)
-        ? `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${text}`
-        : `https://web.whatsapp.com/send?phone=${whatsappNumber}&text=${text}`;
+            // Collect input values
+            const name = encodeURIComponent(document.getElementById("name").value);
+            const email = encodeURIComponent(document.getElementById("email").value);
+            const subject = encodeURIComponent(document.getElementById("subject").value);
+            const message = encodeURIComponent(document.getElementById("message").value);
 
-    window.open(url, "_blank");
+            const whatsappNumber = "919972966961"; // Your number
+            const text = `📩 New Contact Form Submission\n\n👤 Name: ${name}\n📧 Email: ${email}\n📝 Subject: ${subject}\n💬 Message: ${message}`;
+
+            // Detect mobile vs desktop
+            const url = /Mobi|Android/i.test(navigator.userAgent)
+                ? `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${text}`
+                : `https://web.whatsapp.com/send?phone=${whatsappNumber}&text=${text}`;
+
+            // Open WhatsApp
+            window.open(url, "_blank");
+        });
+    }
 });
 </script> 
     
 </body>
 
 </html>    
+
 
 
