@@ -98,8 +98,28 @@
     function hideMenu() {
         navLinks.style.right = "-200px";
     }
+
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = encodeURIComponent(document.getElementById("name").value);
+    const email = encodeURIComponent(document.getElementById("email").value);
+    const subject = encodeURIComponent(document.getElementById("subject").value);
+    const message = encodeURIComponent(document.getElementById("message").value);
+
+    const whatsappNumber = "919972966961"; // Your number
+    const text = `📩 New Contact Form Submission\n\n👤 Name: ${name}\n📧 Email: ${email}\n📝 Subject: ${subject}\n💬 Message: ${message}`;
+
+    // Detect mobile vs desktop
+    const url = /Mobi|Android/i.test(navigator.userAgent)
+        ? `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${text}`
+        : `https://web.whatsapp.com/send?phone=${whatsappNumber}&text=${text}`;
+
+    window.open(url, "_blank");
+});
 </script> 
     
 </body>
 
 </html>    
+
