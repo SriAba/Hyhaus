@@ -60,11 +60,12 @@
                     </div>
                 </div>
                 <div class="contact-col">
-                    <form id="contactForm">
-                      <input type="text" id="name" placeholder="Your Name" required>
-                      <input type="email" id="email" placeholder="Your Email" required>
-                      <textarea id="message" placeholder="Your Message" required></textarea>
-                      <button type="submit">Send to WhatsApp</button>
+                    <form method="post" action="contactForm">
+                        <input type="text" name="name" placeholder="Enter your name" required>
+                        <input type="email" name="email" placeholder="Enter email address" required>
+                        <input type="text" name="subject" placeholder="Enter your subject" required>
+                        <textarea rows="8" name="message" placeholder="Message" required></textarea>
+                        <button type="submit" class="hero-btn red-btn">Send Message</button>
                     </form>
                 </div>
 
@@ -103,12 +104,13 @@
     
       let name = document.getElementById("name").value;
       let email = document.getElementById("email").value;
+      let subject = document.getElementById("subject").value;
       let message = document.getElementById("message").value;
     
       let phone = "919972966961"; // <-- digits only!
       
       // Always encode text properly
-      let text = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+      let text = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
       let encodedText = encodeURIComponent(text);
       
       let url = `https://wa.me/${phone}?text=${encodedText}`;
@@ -119,6 +121,7 @@
 </body>
 
 </html>    
+
 
 
 
