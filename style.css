@@ -226,6 +226,32 @@ h3{
     transition: transform 0.5s ease-in-out;
 }
 
+/* Existing styles for .campus and .campus-col remain the same */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Optional: adjust .layer if needed */
+.campus-col .layer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.campus-col:hover .layer {
+    background: rgba(0,0,0,0.8);
+}
+
+
 /* Arrows */
 .arrow {
     position: absolute;
@@ -591,6 +617,7 @@ h3{
     text-decoration: none;
     color: #777;
 }
+
 
 
 
