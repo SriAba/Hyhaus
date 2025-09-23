@@ -60,20 +60,12 @@
                     </div>
                 </div>
                 <div class="contact-col">
-                    <form 
-                        action="https://api.whatsapp.com/send" 
-                        method="get" 
-                        target="_blank"
-                        onsubmit="return prepareWhatsAppMessage()"
-                    >
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                        <input type="email" id="email" name="email" placeholder="Enter email address" required>
-                        <input type="text" id="subject" name="subject" placeholder="Enter your subject" required>
-                        <textarea rows="8" id="message" name="message" placeholder="Message" required></textarea>
-                        <button type="submit" class="hero-btn red-btn">Send Message</button>
+                    <form id="contactForm">
+                      <input type="text" id="name" placeholder="Your Name" required>
+                      <input type="email" id="email" placeholder="Your Email" required>
+                      <textarea id="message" placeholder="Your Message" required></textarea>
+                      <button type="submit">Send to WhatsApp</button>
                     </form>
-
-
                 </div>
 
             </div>
@@ -106,24 +98,25 @@
         navLinks.style.right = "-200px";
     }
 
-    function prepareWhatsAppMessage() {
-    const name = encodeURIComponent(document.getElementById("name").value);
-    const email = encodeURIComponent(document.getElementById("email").value);
-    const subject = encodeURIComponent(document.getElementById("subject").value);
-    const message = encodeURIComponent(document.getElementById("message").value);
-
-    const whatsappNumber = "919972966961"; // your number
-    const text = `📩 New Contact Form Submission\n\n👤 Name: ${name}\n📧 Email: ${email}\n📝 Subject: ${subject}\n💬 Message: ${message}`;
-
-    // Set the form action dynamically
-    document.forms[0].action = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${text}`;
-    return true; // allow form to submit
-}
+    document.getElementById("contactForm").addEventListener("submit", function(e){
+      e.preventDefault();
+    
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let message = document.getElementById("message").value;
+    
+      let phone = "919972966961"; // your WhatsApp number
+      let text = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+      
+      let url = `https://wa.me/${phone}?text=${text}`;
+      window.open(url, "_blank");
+    }
 </script> 
     
 </body>
 
 </html>    
+
 
 
 
