@@ -90,6 +90,20 @@
   
 <!----JavaScript for toggle menu---->
 <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      // Check if there's a hash in the URL
+      if (window.location.hash) {
+        const id = window.location.hash.substring(1); // remove the #
+        const element = document.getElementById(id);
+        if (element) {
+          // Smooth scroll after slight delay to ensure page has rendered
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: "smooth" });
+          }, 100);
+        }
+      }
+    });
+    
     var navLinks = document.getElementById("navLinks");
 
     function showMenu() {
@@ -122,6 +136,7 @@
 </body>
 
 </html>    
+
 
 
 
