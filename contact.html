@@ -65,6 +65,7 @@
                     <form id="contactForm">
                         <input type="text" id="name" name="name" placeholder="Enter your name" required>
                         <input type="email" id="email" name="email" placeholder="Enter email address" required>
+                        <input type="phone" id="phone" name="phone" placeholder="Enter phone number (we don't spam)" required>
                         <input type="text" id="subject" name="subject" placeholder="Enter your subject" required>
                         <textarea id="message" name="message" placeholder="Message" required></textarea>
                         <button type="submit" class="hero-btn red-btn">Send Message</button>
@@ -120,13 +121,14 @@
     
       let name = document.getElementById("name").value;
       let email = document.getElementById("email").value;
+      let phone = document.getElementById("phone").value;
       let subject = document.getElementById("subject").value;
       let message = document.getElementById("message").value;
     
       let phone = "918217782328"; // digits only
     
       // Build WhatsApp message
-      let text = `You have a new lead from hyhaus.in\n\n Name: ${name}\n Email: ${email}\n Subject: ${subject}\n Message: ${message}`;
+      let text = `Hi there! I'm excited to build my dream.\n\n Name: ${name}\n\n Email: ${email}\n\n Pnone no.: ${phone}\n\n Subject: ${subject}\n\n Message: ${message}`;
       let encodedText = encodeURIComponent(text);
     
       let url = `https://wa.me/${phone}?text=${encodedText}`;
@@ -137,6 +139,7 @@
 </body>
 
 </html>    
+
 
 
 
