@@ -41,9 +41,13 @@
         <div id="featherliteModal" class="modal">
           <div class="modal-content">
             <span class="close" onclick="closeModal('featherliteModal')">&times;</span>
-            <h2>Project featherlite</h2>
-            <img src="images/featherliteCard.png" alt="Project Featherlite" style="width:100%; margin-bottom:15px;">
-            <p>A hospitality project in Coorg with an attached layout—crafted for those who seek their own piece of heaven.</p>
+            <h2>Project Featherlite</h2>
+            <p>A state-of-the-art warehouse & factory for Featherlite, the global furniture brand.</p>
+            <div class="carousel">
+              <button class="carousel-arrow left" onclick="prevImage('featherlite')">&#10094;</button>
+              <img id="featherlite-carousel-img" src="images/featherliteCard1.png" alt="Featherlite Image" style="width:100%;max-height:300px;">
+              <button class="carousel-arrow right" onclick="nextImage('featherlite')">&#10095;</button>
+            </div>
           </div>
         </div>
 
@@ -125,41 +129,124 @@
   
 <!----JavaScript for toggle menu---->
 <script>
-    var navLinks = document.getElementById("navLinks");
+  var navLinks = document.getElementById("navLinks");
 
-    function showMenu() {
-        navLinks.style.right = "0";
-    }
+  function showMenu() {
+      navLinks.style.right = "0";
+  }
 
-    function hideMenu() {
-        navLinks.style.right = "-200px";
-    }
+  function hideMenu() {
+      navLinks.style.right = "-200px";
+  }
 
-    // Function to open a modal
-    function openModal(id) {
-      document.getElementById(id).style.display = "block";
-    }
-    
-    // Function to close a modal
-    function closeModal(id) {
-      document.getElementById(id).style.display = "none";
-    }
-    
-    // Optional: Close modal when clicking outside
-    window.onclick = function(event) {
-      document.querySelectorAll('.modal').forEach(modal => {
-        if (event.target === modal) {
-          modal.style.display = "none";
-        }
-      });
-    };
-    
-    // Attach click event to your card
-    document.getElementById('danta').addEventListener('click', function() {
-      openModal('dantaModal');
+  // Modal logic
+  function openModal(id) {
+    document.getElementById(id).style.display = "block";
+  }
+  
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+  
+  // Optional: Close modal when clicking outside
+  window.onclick = function(event) {
+    document.querySelectorAll('.modal').forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
     });
+  };
 
-</script> 
+  // Carousel logic for each project
+  const carouselImages = {
+    featherlite: [
+      "images/featherliteCard1.png",
+      "images/featherliteCard2.png",
+      "images/featherliteCard3.png"
+    ],
+    // Add arrays for other projects, e.g. "danta": [...], "alliance": [...]
+  };
+  const currentImageIndex = {
+    featherlite: 0
+    // Add keys for other projects
+  };
+
+  function showCarouselImage(projectId) {
+    const imgElem = document.getElementById(projectId + "-carousel-img");
+    if (imgElem) {
+      imgElem.src = carouselImages[projectId][currentImageIndex[projectId]];
+    }
+  }
+
+  function nextImage(projectId) {
+    currentImageIndex[projectId]++;
+    if (currentImageIndex[projectId] >= carouselImages[projectId].length) {
+      currentImageIndex[projectId] = 0;
+    }
+    showCarouselImage(projectId);
+  }
+
+  function prevImage(projectId) {
+    currentImageIndex[projectId]--;
+    if (currentImageIndex[projectId] < 0) {
+      currentImageIndex[projectId] = carouselImages[projectId].length - 1;
+    }
+    showCarouselImage(projectId);
+  }
+
+  // Initialize the first image when modal opens
+  document.getElementById('featherlite').addEventListener('click', function() {
+    currentImageIndex['featherlite'] = 0;
+    showCarouselImage('featherlite');
+    openModal('featherliteModal');
+  });
+
+  // Repeat for other project cards...
+</script>
+
+<style>
+/* Add these styles to your style.css or inside <style> tags */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+.close {
+  color: #aaa;
+  position: absolute;
+  right: 20px; top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+.carousel-arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  padding: 0 8px;
+}
+</style>
     
 </body>
 </html>
