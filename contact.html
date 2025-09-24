@@ -125,13 +125,13 @@
       let subject = document.getElementById("subject").value;
       let message = document.getElementById("message").value;
     
-      let phone = "918217782328"; // digits only
+      let myphone = "918217782328"; // digits only
     
       // Build WhatsApp message
       let text = `Hi there! I'm excited to build my dream.\n\n Name: ${name}\n\n Email: ${email}\n\n Pnone no.: ${phone}\n\n Subject: ${subject}\n\n Message: ${message}`;
       let encodedText = encodeURIComponent(text);
     
-      let url = `https://wa.me/${phone}?text=${encodedText}`;
+      let url = `https://wa.me/${myphone}?text=${encodedText}`;
       window.open(url, "_blank");
     });
 </script> 
@@ -139,6 +139,7 @@
 </body>
 
 </html>    
+
 
 
 
