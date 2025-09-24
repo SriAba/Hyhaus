@@ -45,7 +45,7 @@
             <p>A state-of-the-art warehouse & factory for Featherlite, the global furniture brand.</p>
             <div class="carousel-project">
               <button class="carousel-project-arrow left" onclick="prevImage('featherlite')">&#10094;</button>
-              <img id="featherlite-carousel-img" src="images/featherliteCard1.png" alt="Featherlite Image" style="width:100%;max-height:300px;">
+              <img id="featherlite-carousel-img" src="images/featherliteCard1.png" alt="Featherlite Image" class="project-carousel-img">
               <button class="carousel-project-arrow right" onclick="nextImage('featherlite')">&#10095;</button>
             </div>
           </div>
@@ -65,7 +65,7 @@
             <p>Alliance School of Performing Arts – a unique initiative for holistic Arts education.</p>
             <div class="carousel-project">
               <button class="carousel-project-arrow left" onclick="prevImage('alliance')">&#10094;</button>
-              <img id="alliance-carousel-img" src="Alliance/alliance05.jpg" alt="Alliance University Image" style="width:100%;max-height:300px;">
+              <img id="alliance-carousel-img" src="Alliance/alliance05.jpg" alt="Alliance University Image" class="project-carousel-img">
               <button class="carousel-project-arrow right" onclick="nextImage('alliance')">&#10095;</button>
             </div>
           </div>
@@ -85,7 +85,7 @@
             <p>A hospitality project in Coorg with an attached layout—crafted for those who seek their own piece of heaven.</p>
             <div class="carousel-project">
               <button class="carousel-project-arrow left" onclick="prevImage('danta')">&#10094;</button>
-              <img id="danta-carousel-img" src="images/dantaCard1.png" alt="Danta Resorts Image" style="width:100%;max-height:300px;">
+              <img id="danta-carousel-img" src="images/dantaCard1.png" alt="Danta Resorts Image" class="project-carousel-img">
               <button class="carousel-project-arrow right" onclick="nextImage('danta')">&#10095;</button>
             </div>
           </div>
@@ -105,7 +105,7 @@
             <p>A hostel project in Mysore designed to comfortably accommodate 20 to 30 students.</p>
             <div class="carousel-project">
               <button class="carousel-project-arrow left" onclick="prevImage('hostel')">&#10094;</button>
-              <img id="hostel-carousel-img" src="images/hostelCard1.jpg" alt="Hostel Project Image" style="width:100%;max-height:300px;">
+              <img id="hostel-carousel-img" src="images/hostelCard1.jpg" alt="Hostel Project Image" class="project-carousel-img">
               <button class="carousel-project-arrow right" onclick="nextImage('hostel')">&#10095;</button>
             </div>
           </div>
@@ -125,7 +125,7 @@
             <p>A renovation initiative aimed at transforming homes to reflect palace-like grandeur.</p>
             <div class="carousel-project">
               <button class="carousel-project-arrow left" onclick="prevImage('saidham')">&#10094;</button>
-              <img id="saidham-carousel-img" src="images/saidham1.jpg" alt="Saidham Project Image" style="width:100%;max-height:300px;">
+              <img id="saidham-carousel-img" src="images/saidham1.jpg" alt="Saidham Project Image" class="project-carousel-img">
               <button class="carousel-project-arrow right" onclick="nextImage('saidham')">&#10095;</button>
             </div>
           </div>
@@ -145,7 +145,7 @@
             <p>A commercial space in Indiranagar, suitable for offices and retail shops.</p>
             <div class="carousel-project">
               <button class="carousel-project-arrow left" onclick="prevImage('adloft')">&#10094;</button>
-              <img id="adloft-carousel-img" src="images/adloft1.jpg" alt="A&D Loft Image" style="width:100%;max-height:300px;">
+              <img id="adloft-carousel-img" src="images/adloft1.jpg" alt="A&D Loft Image" class="project-carousel-img">
               <button class="carousel-project-arrow right" onclick="nextImage('adloft')">&#10095;</button>
             </div>
           </div>
@@ -165,7 +165,7 @@
             <p>A monument in central Mysore, designed in harmony with the city’s architectural character.</p>
             <div class="carousel-project">
               <button class="carousel-project-arrow left" onclick="prevImage('clocktower')">&#10094;</button>
-              <img id="clocktower-carousel-img" src="clockTower/clock01.jpg" alt="clocktower Image" style="width:100%;max-height:300px;">
+              <img id="clocktower-carousel-img" src="clockTower/clock01.jpg" alt="clocktower Image" class="project-carousel-img">
               <button class="carousel-project-arrow right" onclick="nextImage('clocktower')">&#10095;</button>
             </div>
           </div>
@@ -185,7 +185,7 @@
             <p>A beautiful home tailored to Mr. Bhardwaj and family</p>
             <div class="carousel-project">
               <button class="carousel-project-arrow left" onclick="prevImage('bhardwaj')">&#10094;</button>
-              <img id="bhardwaj-carousel-img" src="Bhardwaj/1.jpg" alt="bhardwaj image" style="width:100%;max-height:300px;">
+              <img id="bhardwaj-carousel-img" src="Bhardwaj/1.jpg" alt="bhardwaj image" class="project-carousel-img">
               <button class="carousel-project-arrow right" onclick="nextImage('bhardwaj')">&#10095;</button>
             </div>
           </div>
@@ -205,7 +205,7 @@
             <p>An educational hub with state-of-the-art classrooms for world class education.</p>
             <div class="carousel-project">
               <button class="carousel-project-arrow left" onclick="prevImage('lc3')">&#10094;</button>
-              <img id="lc3-carousel-img" src="LC3/1.jpg" alt="lc3 Image" style="width:100%;max-height:300px;">
+              <img id="lc3-carousel-img" src="LC3/1.jpg" alt="lc3 Image" class="project-carousel-img">
               <button class="carousel-project-arrow right" onclick="nextImage('lc3')">&#10095;</button>
             </div>
           </div>
@@ -508,6 +508,16 @@
   cursor: pointer;
   color: #333;
   padding: 0 8px;
+}
+
+.project-carousel-img {
+  display: block;
+  max-width: 100%;
+  max-height: 300px;
+  margin: 0 auto;
+  object-fit: contain;
+  width: auto;
+  height: auto;
 }
 </style>
     
