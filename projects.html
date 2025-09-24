@@ -32,10 +32,19 @@
       
       <div class="projects-grid">
         <!-- Project Card 1 -->
-        <div id="featherlite" class="project-card">
+        <div id="featherlite" class="project-card" onclick="openModal('featherliteModal')">
           <img src="images/mainCard.png" alt="Project 1">
           <h3>Project Featherlite</h3>
           <p>A state-of-the-art warehouse & factory for Featherlite, the global furniture brand.</p>
+        </div>
+
+        <div id="featherliteModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('featherliteModal')">&times;</span>
+            <h2>Project featherlite</h2>
+            <img src="images/featherliteCard.png" alt="Project Featherlite" style="width:100%; margin-bottom:15px;">
+            <p>A hospitality project in Coorg with an attached layout—crafted for those who seek their own piece of heaven.</p>
+          </div>
         </div>
 
         <!-- Project Card 2 -->
