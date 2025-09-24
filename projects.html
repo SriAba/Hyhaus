@@ -53,7 +53,7 @@
 
         <!-- Project Card 2 -->
         <div id="alliance" class="project-card">
-          <img src="images/allianceCard.JPG" alt="Project 2">
+          <img src="Alliance/alliance05" alt="Project 2">
           <h3>Alliance University</h3>
           <p>Alliance School of Performing Arts – a unique initiative for holistic Arts education.</p>
         </div>
@@ -91,7 +91,7 @@
           </div>
         </div>
           
-        <!-- Project Card 1 -->
+        <!-- Project Card 4 -->
         <div id="hostel" class="project-card">
           <img src="images/hostelCard.jpg" alt="Project 1">
           <h3>Hostel Project</h3>
@@ -111,7 +111,7 @@
           </div>
         </div>
 
-        <!-- Project Card 2 -->
+        <!-- Project Card 5 -->
         <div id="saidham" class="project-card">
           <img src="images/saidham.jpg" alt="Project 2">
           <h3>Saidham</h3>
@@ -131,9 +131,9 @@
           </div>
         </div>
 
-        <!-- Project Card 3 -->
+        <!-- Project Card 6 -->
         <div id="adloft" class="project-card">
-          <img src="images/21.jpg" alt="Project 3">
+          <img src="A&D_Loft/adl01.png" alt="Project 3">
           <h3>A&D Loft</h3>
           <p>A commercial space in Indiranagar, suitable for offices and retail shops.</p>
         </div>    
@@ -147,6 +147,66 @@
               <button class="carousel-project-arrow left" onclick="prevImage('adloft')">&#10094;</button>
               <img id="adloft-carousel-img" src="images/adloft1.jpg" alt="A&D Loft Image" style="width:100%;max-height:300px;">
               <button class="carousel-project-arrow right" onclick="nextImage('adloft')">&#10095;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 7 -->
+        <div id="clocktower" class="project-card">
+          <img src="clockTower/clock01.jpg" alt="Project 3">
+          <h3>Clock Tower, Mysore</h3>
+          <p>A monument in central Mysore, designed in harmony with the city’s architectural character.</p>
+        </div>    
+
+        <div id="clocktowerModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('clocktowerModal')">&times;</span>
+            <h2>Clock Tower, Mysore</h2>
+            <p>A monument in central Mysore, designed in harmony with the city’s architectural character.</p>
+            <div class="carousel-project">
+              <button class="carousel-project-arrow left" onclick="prevImage('clocktower')">&#10094;</button>
+              <img id="clocktower-carousel-img" src="clockTower/clock01.jpg" alt="clocktower" style="width:100%;max-height:300px;">
+              <button class="carousel-project-arrow right" onclick="nextImage('clocktower')">&#10095;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 8 -->
+        <div id="bhardwaj" class="project-card">
+          <img src="Bhardwaj/1.jpg" alt="Project 3">
+          <h3>Home of Mr. Bhardwaj</h3>
+          <p>A beautiful home tailored to Mr. Bhardwaj and family</p>
+        </div>    
+
+        <div id="bhardwajModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('bhardwajModal')">&times;</span>
+            <h2>Home of Mr. Bhardwaj</h2>
+            <p>A beautiful home tailored to Mr. Bhardwaj and family</p>
+            <div class="carousel-project">
+              <button class="carousel-project-arrow left" onclick="prevImage('bhardwaj')">&#10094;</button>
+              <img id="bhardwaj-carousel-img" src="Bhardwaj/1.jpg" alt="bhardwaj image" style="width:100%;max-height:300px;">
+              <button class="carousel-project-arrow right" onclick="nextImage('bhardwaj')">&#10095;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 9 -->
+        <div id="lc3" class="project-card">
+          <img src="LC3/1.jpg" alt="Project 3">
+          <h3>Alliance University - LC3</h3>
+          <p>An educational hub with state-of-the-art classrooms for world class education.</p>
+        </div>    
+
+        <div id="lc3Modal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('lc3Modal')">&times;</span>
+            <h2>Alliance University - LC3</h2>
+            <p>An educational hub with state-of-the-art classrooms for world class education.</p>
+            <div class="carousel-project">
+              <button class="carousel-project-arrow left" onclick="prevImage('lc3')">&#10094;</button>
+              <img id="lc3-carousel-img" src="LC3/1.jpg" alt="lc3 Image" style="width:100%;max-height:300px;">
+              <button class="carousel-project-arrow right" onclick="nextImage('lc3')">&#10095;</button>
             </div>
           </div>
         </div>
@@ -228,19 +288,15 @@
 
   const carouselImages = {
       featherlite: [
-        "featherlite/mainCar.png"
+        "featherlite/mainCard.png"
       ],
       alliance: [
-        "Alliance/alliance01.JPG",
-        "Alliance/alliance03.JPG",
-        "Alliance/alliance04.JPG",
-        "Alliance/alliance05.JPG",
-        "Alliance/alliance06.JPG",
-        "Alliance/alliance07.JPG",
-        "Alliance/alliance08.JPG",
-        "Alliance/alliance09.JPG",
-        "Alliance/alliance10.JPG",
-        "Alliance/alliance11.JPG"
+        "Alliance/alliance01.jpg",
+        "Alliance/alliance03.jpg",
+        "Alliance/alliance04.jpg",
+        "Alliance/alliance05.jpg",
+        "Alliance/alliance06.jpg",
+        "Alliance/alliance07.jpg"
       ],
       danta: [
         "DantaResorts/danta01.png",
@@ -277,8 +333,53 @@
         "A&D_Loft/adl03.jpg",
         "A&D_Loft/adl04.jpg",
         "A&D_Loft/adl05.jpg",
-        "A&D_Loft/adl06.jpg",
-        "A&D_Loft/adl07.jpg"
+        "A&D_Loft/adl06.jpg"
+      ],
+      clocktower: [
+        "clocktower/clock01.jpg",
+        "clocktower/clock02.jpg",
+        "clocktower/clock03.jpg",
+        "clocktower/clock04.png",
+        "clocktower/clock05.jpg",
+        "clocktower/clock06.jpg",
+        "clocktower/clock07.jpg",
+        "clocktower/clock08.png",
+        "clocktower/clock09.jpg",
+        "clocktower/clock10.jpg"
+      ],
+      bhardwaj: [
+        "Bhardwaj/1.jpg",
+        "Bhardwaj/2.jpg",
+        "Bhardwaj/3.jpg",
+        "Bhardwaj/4.jpg",
+        "Bhardwaj/5.jpg",
+        "Bhardwaj/6.jpg",
+        "Bhardwaj/7.jpg",
+        "Bhardwaj/8.jpg",
+        "Bhardwaj/9.jpg",
+        "Bhardwaj/10.jpg"
+      ],
+      lc3: [
+        "LC3/1.jpg",
+        "LC3/2.jpg",
+        "LC3/3.jpg",
+        "LC3/4.jpg",
+        "LC3/5.jpg",
+        "LC3/6.jpg",
+        "LC3/7.jpg",
+        "LC3/8.jpg",
+        "LC3/9.jpg",
+        "LC3/10.jpg",
+        "LC3/11.jpg",
+        "LC3/12.jpg",
+        "LC3/13.jpg",
+        "LC3/14.jpg",
+        "LC3/15.jpg",
+        "LC3/16.jpg",
+        "LC3/17.jpg",
+        "LC3/18.jpg",
+        "LC3/19.jpg",
+        "LC3/20.jpg"
       ]
     };
     
@@ -289,7 +390,10 @@
       danta: 0,
       hostel: 0,
       saidham: 0,
-      adloft: 0
+      adloft: 0,
+      clocktower: 0,
+      bhardwaj: 0,
+      lc3: 0
     };
 
   function showCarouselImage(projectId) {
@@ -345,6 +449,21 @@
       currentImageIndex['adloft'] = 0;
       showCarouselImage('adloft');
       openModal('adloftModal');
+    });
+    document.getElementById('clocktower').addEventListener('click', function() {
+      currentImageIndex['clocktower'] = 0;
+      showCarouselImage('clocktower');
+      openModal('clocktowerModal');
+    });
+    document.getElementById('bhardwaj').addEventListener('click', function() {
+      currentImageIndex['bhardwaj'] = 0;
+      showCarouselImage('bhardwaj');
+      openModal('bhardwajModal');
+    });
+    document.getElementById('lc3').addEventListener('click', function() {
+      currentImageIndex['lc3'] = 0;
+      showCarouselImage('lc3');
+      openModal('lc3Modal');
     });
 
   // Repeat for other project cards...
