@@ -58,18 +58,57 @@
           <p>Alliance School of Performing Arts – a unique initiative for holistic Arts education.</p>
         </div>
 
+        <div id="allianceModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('allianceModal')">&times;</span>
+            <h2>Alliance University</h2>
+            <p>Alliance School of Performing Arts – a unique initiative for holistic Arts education.</p>
+            <div class="carousel">
+              <button class="carousel-arrow left" onclick="prevImage('alliance')">&#10094;</button>
+              <img id="alliance-carousel-img" src="images/allianceCard1.jpg" alt="Alliance University Image" style="width:100%;max-height:300px;">
+              <button class="carousel-arrow right" onclick="nextImage('alliance')">&#10095;</button>
+            </div>
+          </div>
+        </div>
+
         <!-- Project Card 3 -->
         <div id="danta" class="project-card">
           <img src="images/dantaCard.png" alt="Project 3">
           <h3>Danta Resorts & Estates</h3>
           <p>A hospitality project in Coorg with an attached layout—crafted for those who seek their own piece of heaven.</p>
-        </div>       
+        </div>  
+
+        <div id="dantaModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('dantaModal')">&times;</span>
+            <h2>Danta Resorts & Estates</h2>
+            <p>A hospitality project in Coorg with an attached layout—crafted for those who seek their own piece of heaven.</p>
+            <div class="carousel">
+              <button class="carousel-arrow left" onclick="prevImage('danta')">&#10094;</button>
+              <img id="danta-carousel-img" src="images/dantaCard1.png" alt="Danta Resorts Image" style="width:100%;max-height:300px;">
+              <button class="carousel-arrow right" onclick="nextImage('danta')">&#10095;</button>
+            </div>
+          </div>
+        </div>
           
         <!-- Project Card 1 -->
         <div id="hostel" class="project-card">
           <img src="images/hostelCard.jpg" alt="Project 1">
           <h3>Hostel Project</h3>
           <p>A hostel project in Mysore designed to comfortably accommodate 20 to 30 students.</p>
+        </div>
+
+        <div id="hostelModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('hostelModal')">&times;</span>
+            <h2>Hostel Project</h2>
+            <p>A hostel project in Mysore designed to comfortably accommodate 20 to 30 students.</p>
+            <div class="carousel">
+              <button class="carousel-arrow left" onclick="prevImage('hostel')">&#10094;</button>
+              <img id="hostel-carousel-img" src="images/hostelCard1.jpg" alt="Hostel Project Image" style="width:100%;max-height:300px;">
+              <button class="carousel-arrow right" onclick="nextImage('hostel')">&#10095;</button>
+            </div>
+          </div>
         </div>
 
         <!-- Project Card 2 -->
@@ -79,13 +118,41 @@
           <p>A renovation initiative aimed at transforming homes to reflect palace-like grandeur.</p>
         </div>
 
+        <div id="saidhamModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('saidhamModal')">&times;</span>
+            <h2>Saidhaam</h2>
+            <p>A renovation initiative aimed at transforming homes to reflect palace-like grandeur.</p>
+            <div class="carousel">
+              <button class="carousel-arrow left" onclick="prevImage('saidham')">&#10094;</button>
+              <img id="saidham-carousel-img" src="images/saidham1.jpg" alt="Saidham Project Image" style="width:100%;max-height:300px;">
+              <button class="carousel-arrow right" onclick="nextImage('saidham')">&#10095;</button>
+            </div>
+          </div>
+        </div>
+
         <!-- Project Card 3 -->
         <div id="adloft" class="project-card">
           <img src="images/21.jpg" alt="Project 3">
           <h3>A&D Loft</h3>
           <p>A commercial space in Indiranagar, suitable for offices and retail shops.</p>
-        </div>       
+        </div>    
+
+        <div id="adloftModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('adloftModal')">&times;</span>
+            <h2>A&D Loft</h2>
+            <p>A commercial space in Indiranagar, suitable for offices and retail shops.</p>
+            <div class="carousel">
+              <button class="carousel-arrow left" onclick="prevImage('adloft')">&#10094;</button>
+              <img id="adloft-carousel-img" src="images/adloft1.jpg" alt="A&D Loft Image" style="width:100%;max-height:300px;">
+              <button class="carousel-arrow right" onclick="nextImage('adloft')">&#10095;</button>
+            </div>
+          </div>
+        </div>
+        
       </div>
+    
 
     
     </section>
@@ -157,19 +224,44 @@
     });
   };
 
-  // Carousel logic for each project
   const carouselImages = {
-    featherlite: [
-      "images/featherliteCard1.png",
-      "images/featherliteCard2.png",
-      "images/featherliteCard3.png"
-    ],
-    // Add arrays for other projects, e.g. "danta": [...], "alliance": [...]
-  };
-  const currentImageIndex = {
-    featherlite: 0
-    // Add keys for other projects
-  };
+      featherlite: [
+        "images/featherliteCard1.png",
+        "images/featherliteCard2.png",
+        "images/featherliteCard3.png"
+      ],
+      alliance: [
+        "images/allianceCard1.jpg",
+        "images/allianceCard2.jpg",
+        "images/allianceCard3.jpg"
+      ],
+      danta: [
+        "images/dantaCard1.png",
+        "images/dantaCard2.png"
+      ],
+      hostel: [
+        "images/hostelCard1.jpg",
+        "images/hostelCard2.jpg"
+      ],
+      saidham: [
+        "images/saidham1.jpg",
+        "images/saidham2.jpg"
+      ],
+      adloft: [
+        "images/adloft1.jpg",
+        "images/adloft2.jpg"
+      ]
+    };
+    
+    // 2. Track the current image index for each project
+    const currentImageIndex = {
+      featherlite: 0,
+      alliance: 0,
+      danta: 0,
+      hostel: 0,
+      saidham: 0,
+      adloft: 0
+    };
 
   function showCarouselImage(projectId) {
     const imgElem = document.getElementById(projectId + "-carousel-img");
@@ -196,10 +288,35 @@
 
   // Initialize the first image when modal opens
   document.getElementById('featherlite').addEventListener('click', function() {
-    currentImageIndex['featherlite'] = 0;
-    showCarouselImage('featherlite');
-    openModal('featherliteModal');
-  });
+      currentImageIndex['featherlite'] = 0;
+      showCarouselImage('featherlite');
+      openModal('featherliteModal');
+    });
+    document.getElementById('alliance').addEventListener('click', function() {
+      currentImageIndex['alliance'] = 0;
+      showCarouselImage('alliance');
+      openModal('allianceModal');
+    });
+    document.getElementById('danta').addEventListener('click', function() {
+      currentImageIndex['danta'] = 0;
+      showCarouselImage('danta');
+      openModal('dantaModal');
+    });
+    document.getElementById('hostel').addEventListener('click', function() {
+      currentImageIndex['hostel'] = 0;
+      showCarouselImage('hostel');
+      openModal('hostelModal');
+    });
+    document.getElementById('saidham').addEventListener('click', function() {
+      currentImageIndex['saidham'] = 0;
+      showCarouselImage('saidham');
+      openModal('saidhamModal');
+    });
+    document.getElementById('adloft').addEventListener('click', function() {
+      currentImageIndex['adloft'] = 0;
+      showCarouselImage('adloft');
+      openModal('adloftModal');
+    });
 
   // Repeat for other project cards...
 </script>
