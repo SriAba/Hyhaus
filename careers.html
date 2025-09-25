@@ -98,7 +98,7 @@
       formMessage.textContent = 'Sending...';
     
       try {
-        const response = await fetch('/.netlify/functions/sendResume', {
+        const response = await fetch('/.netlify/functions/sendResume.js', {
           method: 'POST',
           body: formData
         });
