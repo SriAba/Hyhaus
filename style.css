@@ -643,6 +643,132 @@ h3{
     color: #777;
 }
 
+/* Careers Section Styles - matches Hyhaus website design aesthetic */
+
+.careers {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #fff3f3;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+}
+
+.careers h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #b07931;
+    letter-spacing: 1px;
+}
+
+.careers p {
+    color: #777;
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    padding: 0 10px;
+}
+
+.careers-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 30px 25px 25px 25px;
+    text-align: left;
+}
+
+.careers-form label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 15px;
+    color: #b07931;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.careers-form input[type="text"],
+.careers-form input[type="email"],
+.careers-form input[type="tel"],
+.careers-form textarea,
+.careers-form select,
+.careers-form input[type="file"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #f0f0f0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.careers-form input[type="file"] {
+    padding: 7px 0;
+    background: none;
+    border: none;
+}
+
+.careers-form input:focus,
+.careers-form textarea:focus,
+.careers-form select:focus {
+    border-color: #b07931;
+    outline: none;
+}
+
+.careers-form textarea {
+    resize: vertical;
+    min-height: 70px;
+    max-height: 200px;
+}
+
+.careers-form small {
+    color: #777;
+    display: block;
+    margin-bottom: 12px;
+    margin-top: -8px;
+}
+
+.careers-form button[type="submit"] {
+    background: #b07931;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.09);
+    transition: background 0.3s;
+}
+
+.careers-form button[type="submit"]:hover {
+    background: #f44336;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    .careers {
+        width: 96%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .careers-form {
+        max-width: 100%;
+        padding: 18px 8px;
+    }
+    .careers h2 {
+        font-size: 22px;
+    }
+}
 
 
 
