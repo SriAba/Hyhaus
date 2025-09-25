@@ -23,61 +23,86 @@
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>   
-            <h1>Careers</h1>
+        <h1>Careers</h1>
     </section>
     
 <!-------- careers ---------->
 
 <section class="careers">
-    <h2>Careers</h2>
-    <p>Join our team and help us build dream homes.</p>
+    <h2>Join Our Team</h2>
+    <p>Help us build dream homes. Submit your application below:</p>
+    <form class="careers-form" action="#" method="post" enctype="multipart/form-data">
+        <label for="name">Name<span style="color:red">*</span>:</label>
+        <input type="text" id="name" name="name" required placeholder="Your full name">
+
+        <label for="email">Email<span style="color:red">*</span>:</label>
+        <input type="email" id="email" name="email" required placeholder="your@email.com">
+
+        <label for="phone">Phone<span style="color:red">*</span>:</label>
+        <input type="tel" id="phone" name="phone" required placeholder="10-digit phone number" pattern="[0-9]{10,15}" maxlength="15">
+
+        <label for="referrer">Referrer Name (optional):</label>
+        <input type="text" id="referrer" name="referrer" placeholder="Referrer name (if any)">
+
+        <label for="address">Address<span style="color:red">*</span>:</label>
+        <textarea id="address" name="address" required placeholder="Your address"></textarea>
+
+        <label for="skills">Skills<span style="color:red">*</span>:</label>
+        <input type="text" id="skills" name="skills" required placeholder="e.g. Project Management, Design, etc.">
+
+        <label for="job">Job Applying For<span style="color:red">*</span>:</label>
+        <select id="job" name="job" required>
+            <option value="">-- Select Job --</option>
+            <option value="Architect">Architect</option>
+            <option value="Civil Engineer">Civil Engineer</option>
+            <option value="Interior Designer">Interior Designer</option>
+            <option value="Site Supervisor">Site Supervisor</option>
+            <option value="Sales & Marketing">Sales & Marketing</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="resume">Upload Resume (PDF, max 3MB)<span style="color:red">*</span>:</label>
+        <input type="file" id="resume" name="resume" required accept=".pdf" onchange="validateResume(this)">
+        <small>Only PDF files are accepted. Max size: 3MB.</small>
+
+        <button type="submit">Submit Application</button>
+    </form>
 </section>
+
+<script>
+    function validateResume(input) {
+        if (input.files && input.files[0]) {
+            if (input.files[0].size > 3 * 1024 * 1024) { // 3MB in bytes
+                alert("File size exceeds 3MB. Please upload a smaller file.");
+                input.value = "";
+            }
+        }
+    }
+</script>
 
 <!-------- footer ---------->
 
 <section class="footer">
-        <h4>We would like to build your dream house.</h4>
-        <div class="icons">
-            <a href="https://www.facebook.com/hyhaus.in/"><i class="fa fa-facebook"></i></a>
-            <a href="https://x.com/hyhaus_official"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.instagram.com/hyhaus.in/"><i class="fa fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/kristal-constructions/"><i class="fa fa-linkedin"></i></a>
-            
-        </div>
-        <a href="https://www.linkedin.com/in/srirangaabakari/" class="footer-link"><p>made with <i class="fa fa-heart-o"></i> by Sriranga Abakari</p></a>
+    <h4>We would like to build your dream house.</h4>
+    <div class="icons">
+        <a href="https://www.facebook.com/hyhaus.in/"><i class="fa fa-facebook"></i></a>
+        <a href="https://x.com/hyhaus_official"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.instagram.com/hyhaus.in/"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/kristal-constructions/"><i class="fa fa-linkedin"></i></a>
+    </div>
+    <a href="https://www.linkedin.com/in/srirangaabakari/" class="footer-link"><p>made with <i class="fa fa-heart-o"></i> by Sriranga Abakari</p></a>
 </section>    
-  
-  
+
 <!----JavaScript for toggle menu---->
 <script>
     var navLinks = document.getElementById("navLinks");
-
     function showMenu() {
         navLinks.style.right = "0";
     }
-
     function hideMenu() {
         navLinks.style.right = "-200px";
     }
-
 </script> 
     
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
