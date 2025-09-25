@@ -78,6 +78,31 @@
             }
         }
     }
+
+    <!------form submit---------->
+
+    const form = document.getElementById('resume-form');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+    
+      const formData = new FormData(form);
+    
+      try {
+        const response = await fetch('/.netlify/functions/sendResume', {
+          method: 'POST',
+          body: formData
+        });
+    
+        const text = await response.text();
+        alert(text);
+        form.reset();
+      } catch (error) {
+        console.error(error);
+        alert("Error sending resume. Try again.");
+      }
+    });
+
 </script>
 
 <!-------- footer ---------->
