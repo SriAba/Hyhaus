@@ -66,6 +66,7 @@
         <small>Only PDF files are accepted. Max size: 3MB.</small>
 
         <button type="submit">Submit Application</button>
+        <div id="form-message" style="margin-top:10px; color: green;"></div>
     </form>
 </section>
 
@@ -79,14 +80,22 @@
         }
     }
 
-    <!------form submit---------->
+    /*--------submit form-----------*/
+
 
     const form = document.getElementById('resume-form');
-
+    const submitBtn = document.getElementById('submit-btn');
+    const formMessage = document.getElementById('form-message');
+    
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
     
       const formData = new FormData(form);
+    
+      // Disable button & show sending message
+      submitBtn.disabled = true;
+      formMessage.style.color = 'black';
+      formMessage.textContent = 'Sending...';
     
       try {
         const response = await fetch('/.netlify/functions/sendResume', {
@@ -95,13 +104,21 @@
         });
     
         const text = await response.text();
-        alert(text);
-        form.reset();
+    
+        // Show success message
+        formMessage.style.color = 'green';
+        formMessage.textContent = text;
+    
+        form.reset();       // Reset form
       } catch (error) {
         console.error(error);
-        alert("Error sending resume. Try again.");
+        formMessage.style.color = 'red';
+        formMessage.textContent = "Error sending resume. Please try again.";
+      } finally {
+        submitBtn.disabled = false; // Re-enable button
       }
     });
+    
 
 </script>
 
