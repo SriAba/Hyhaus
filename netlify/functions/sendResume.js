@@ -19,8 +19,8 @@ exports.handler = async function(event, context) {
       let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: 'abakarisriranga@gmail.com',
-          pass: 'Rambo@2965' // use Gmail app password
+          user: process.env.EMAIL_USER,
+          pass: process.env.EMAIL_PASS // use Gmail app password
         }
       });
 
@@ -40,7 +40,7 @@ exports.handler = async function(event, context) {
 
       // 2️⃣ Send thank you email to candidate
       let mailToCandidate = {
-        from: 'hr@hyhaus.com',
+        from: 'abakarisriranga@gmail.com',
         to: email,
         subject: 'Thank you for applying',
         text: `Hi ${name},\n\nThank you for applying! We have received your resume and will get back to you soon.\n\nBest regards,\nYour Company`
