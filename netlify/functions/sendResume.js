@@ -1,60 +1,73 @@
 const nodemailer = require('nodemailer');
-const multiparty = require('multiparty');
+const formidable = require('formidable');
 
-exports.handler = async function(event, context) {
-  return new Promise((resolve) => {
-    const form = new multiparty.Form();
+exports.handler = async (event) => {
+  if (event.httpMethod !== 'POST') {
+    return { statusCode: 405, body: 'Method Not Allowed' };
+  }
 
-    form.parse(event, async (err, fields, files) => {
+  // Netlify passes raw multipart body as base64
+  const form = new formidable.IncomingForm({ multiples: false });
+
+  // Parse the multipart body
+  return new Promise((resolve, reject) => {
+    // formidable expects a Node.js req object, so we need to fake one
+    // This workaround assumes Netlify passes the body as base64
+    const req = {
+      headers: event.headers,
+      method: event.httpMethod,
+      // formidable expects a stream, so we need to implement a minimal readable stream
+      on: (evt, cb) => {
+        if (evt === 'data') cb(Buffer.from(event.body, event.isBase64Encoded ? 'base64' : 'utf8'));
+        if (evt === 'end') cb();
+      },
+    };
+
+    form.parse(req, async (err, fields, files) => {
       if (err) {
-        console.error(err);
-        return resolve({ statusCode: 500, body: "Form parsing failed" });
+        resolve({ statusCode: 500, body: 'Formidable error: ' + err.message });
+        return;
       }
 
-      const name = fields.name[0];
-      const email = fields.email[0];
-      const resumeFile = files.resume[0];
+      const { name, email, phone, referrer, address, skills, job } = fields;
+      const resumeFile = files.resume;
 
-      // Create transporter (Gmail example)
+      // Gmail setup
       let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: process.env.EMAIL_USER,
-          pass: process.env.EMAIL_PASS // use Gmail app password
-        }
+          user: process.env.GMAIL_USER, // Set as Netlify env var
+          pass: process.env.GMAIL_PASS, // Set as Netlify env var (App Password)
+        },
       });
 
-      // 1️⃣ Send email to HR
-      let mailToHR = {
-        from: email,
-        to: 'prvnprvn1990@gmail.com',
-        subject: `Resume Submission - ${name}`,
-        text: `Candidate Name: ${name}\nEmail: ${email}`,
+      // Prepare mail options
+      let mailOptions = {
+        from: process.env.GMAIL_USER,
+        to: process.env.GMAIL_USER, // or another recipient
+        subject: `New Career Application: ${name}`,
+        text: `
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Referrer: ${referrer}
+Address: ${address}
+Skills: ${skills}
+Job Applying For: ${job}
+        `,
         attachments: [
           {
             filename: resumeFile.originalFilename,
-            path: resumeFile.path
-          }
-        ]
-      };
-
-      // 2️⃣ Send thank you email to candidate
-      let mailToCandidate = {
-        from: 'abakarisriranga@gmail.com',
-        to: email,
-        subject: 'Thank you for applying',
-        text: `Hi ${name},\n\nThank you for applying! We have received your resume and will get back to you soon.\n\nBest regards,\nYour Company`
+            content: require('fs').readFileSync(resumeFile.filepath),
+          },
+        ],
       };
 
       try {
-        // Send both emails
-        await transporter.sendMail(mailToHR);
-        await transporter.sendMail(mailToCandidate);
-
-        resolve({ statusCode: 200, body: "Resume emailed successfully! Candidate also notified." });
-      } catch (e) {
-        console.error(e);
-        resolve({ statusCode: 500, body: "Error sending emails." });
+        await transporter.sendMail(mailOptions);
+        resolve({ statusCode: 200, body: 'Resume submitted & emailed successfully!' });
+      } catch (error) {
+        resolve({ statusCode: 500, body: 'Error sending email: ' + error.message });
       }
     });
   });
