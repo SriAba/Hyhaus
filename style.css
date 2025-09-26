@@ -830,15 +830,17 @@ h3{
 
 /* Popup Styles */
 .job-popup {
-    display: none;
+    display: none; /* hidden by default */
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6); /* dark overlay */
     z-index: 9999;
-    left: 10px; top: 10px;
-    width: 100vw; height: 100vh;
-    background: rgba(30,21,4,0.20);
-    align-items: center;
     justify-content: center;
-    animation: fadeIn 0.2s;
+    align-items: center;
+    overflow-y: auto; /* allow scrolling if content is taller than screen */
 }
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -848,9 +850,9 @@ h3{
     background: #fff3f3;
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(176,121,49,0.17);
-    max-width: 400px;
+    max-width: 600px;
     width: 90%;
-    margin: 0 16px;  /* add margin so it never touches screen edges */
+    margin: 40px auto; /* add spacing top/bottom for scroll */
     padding: 32px 20px 22px 20px;
     position: relative;
     color: #333;
@@ -877,12 +879,12 @@ h3{
 }
 .close-btn {
     position: absolute;
-    right: 15px; top: 15px;
+    top: 12px;
+    right: 12px;
     font-size: 28px;
-    color: #b07931;
+    font-weight: bold;
     cursor: pointer;
-    font-family: Arial, sans-serif;
-    transition: color 0.2s;
+    color: #333;
 }
 .close-btn:hover {
     color: #f44336;
@@ -912,15 +914,16 @@ h3{
     .job-popup-content {
         width: 90%;
         max-width: 90%;
-        margin: 0 auto;   /* centers the popup */
+        margin: 20px auto;
         padding: 22px 16px 18px 16px;
     }
     .close-btn {
-        top: 10px;
-        right: 10px;   /* keep button fully inside */
+        top: 8px;
+        right: 8px;
         font-size: 24px;
     }
 }
+
 
 
 
