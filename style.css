@@ -833,7 +833,7 @@ h3{
     display: none;
     position: fixed;
     z-index: 9999;
-    left: 0; top: 0;
+    left: 10px; top: 10px;
     width: 100vw; height: 100vh;
     background: rgba(30,21,4,0.20);
     align-items: center;
@@ -914,5 +914,6 @@ h3{
         padding: 22px 7vw 18px 7vw;
     }
 }
+
 
 
