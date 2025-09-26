@@ -771,4 +771,148 @@ h3{
 }
 
 
+/* Job Slots Styles */
+.job-slots {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin: 0 auto 40px auto;
+    max-width: 700px;
+}
+.job-slot {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(176,121,49,0.09);
+    padding: 22px 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.2s;
+    border-left: 5px solid #b07931;
+    position: relative;
+}
+.job-slot:hover {
+    box-shadow: 0 6px 16px rgba(176,121,49,0.18);
+    transform: translateY(-2px) scale(1.01);
+}
+.job-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #b07931;
+    flex: 2;
+    letter-spacing: 0.5px;
+}
+.job-meta {
+    flex: 3;
+    display: flex;
+    gap: 28px;
+    font-size: 15px;
+    color: #777;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.job-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.job-slot::after {
+    content: "\f105";
+    font-family: FontAwesome;
+    font-size: 22px;
+    color: #b07931;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Popup Styles */
+.job-popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(30,21,4,0.20);
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.2s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.job-popup-content {
+    background: #fff3f3;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(176,121,49,0.17);
+    max-width: 400px;
+    width: 92vw;
+    margin: auto;
+    padding: 32px 28px 22px 28px;
+    position: relative;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    animation: slideUp 0.2s;
+}
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
+}
+.job-popup-content h3 {
+    color: #b07931;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+.job-popup-content p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #555;
+}
+.job-popup-content strong {
+    color: #b07931;
+    font-weight: 500;
+}
+.close-btn {
+    position: absolute;
+    right: 15px; top: 15px;
+    font-size: 28px;
+    color: #b07931;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    transition: color 0.2s;
+}
+.close-btn:hover {
+    color: #f44336;
+}
+/* Prevent body scroll when popup open */
+.popup-open {
+    overflow: hidden;
+}
+
+/* Responsive Job Slots and Popups */
+@media (max-width: 700px) {
+    .job-slots {
+        max-width: 100%;
+        gap: 12px;
+    }
+    .job-slot {
+        padding: 14px 13px;
+        font-size: 16px;
+    }
+    .job-title {
+        font-size: 17px;
+    }
+    .job-meta {
+        font-size: 13px;
+        gap: 10px;
+    }
+    .job-popup-content {
+        max-width: 98vw;
+        padding: 22px 7vw 18px 7vw;
+    }
+}
+
 
