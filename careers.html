@@ -30,7 +30,116 @@
 
 <section class="careers">
     <h2>Join Our Team</h2>
-    <p>Help us build dream homes. Submit your application below:</p>
+    <p>Help us build dream homes. Explore opportunities and submit your application below:</p>
+
+    <!-- Job slots start -->
+    <div class="job-slots">
+        <!-- Slot 1 -->
+        <div class="job-slot" onclick="openJobPopup('job1')">
+            <div class="job-title">Site Engineer</div>
+            <div class="job-meta">
+                <span><i class="fa fa-map-marker"></i> Bangalore</span>
+                <span><i class="fa fa-briefcase"></i> 2-5 yrs</span>
+                <span><i class="fa fa-money"></i> ₹4-7 LPA</span>
+            </div>
+        </div>
+        <!-- Slot 2 -->
+        <div class="job-slot" onclick="openJobPopup('job2')">
+            <div class="job-title">Project Manager</div>
+            <div class="job-meta">
+                <span><i class="fa fa-map-marker"></i> Bangalore</span>
+                <span><i class="fa fa-briefcase"></i> 5+ yrs</span>
+                <span><i class="fa fa-money"></i> ₹10-16 LPA</span>
+            </div>
+        </div>
+        <!-- Slot 3 -->
+        <div class="job-slot" onclick="openJobPopup('job3')">
+            <div class="job-title">Interior Designer</div>
+            <div class="job-meta">
+                <span><i class="fa fa-map-marker"></i> Bangalore</span>
+                <span><i class="fa fa-briefcase"></i> 2-5 yrs</span>
+                <span><i class="fa fa-money"></i> ₹3-6 LPA</span>
+            </div>
+        </div>
+        <!-- Slot 4 -->
+        <div class="job-slot" onclick="openJobPopup('job4')">
+            <div class="job-title">Design Engineer</div>
+            <div class="job-meta">
+                <span><i class="fa fa-map-marker"></i> Bangalore</span>
+                <span><i class="fa fa-briefcase"></i> 3-6 yrs</span>
+                <span><i class="fa fa-money"></i> ₹5-9 LPA</span>
+            </div>
+        </div>
+        <!-- Slot 5 -->
+        <div class="job-slot" onclick="openJobPopup('job5')">
+            <div class="job-title">Sales & Marketing</div>
+            <div class="job-meta">
+                <span><i class="fa fa-map-marker"></i> Bangalore</span>
+                <span><i class="fa fa-briefcase"></i> 1-4 yrs</span>
+                <span><i class="fa fa-money"></i> ₹3-6 LPA + Incentives</span>
+            </div>
+        </div>
+    </div>
+    <!-- Job slots end -->
+
+    <!-- Popups start -->
+    <div id="job1" class="job-popup">
+        <div class="job-popup-content">
+            <span class="close-btn" onclick="closeJobPopup('job1')">&times;</span>
+            <h3>Site Engineer</h3>
+            <p><strong>Location:</strong> Bangalore</p>
+            <p><strong>Experience:</strong> 2-5 years</p>
+            <p><strong>Salary:</strong> ₹4-7 LPA</p>
+            <p><strong>Description:</strong> Responsible for site execution, coordination with contractors and vendors, monitoring progress, ensuring quality and safety standards. Should have working knowledge of civil drawings, site supervision, material management, and reporting.</p>
+            <p><strong>Requirements:</strong> B.E/B.Tech/Diploma in Civil Engineering. Good communication and team skills.</p>
+        </div>
+    </div>
+    <div id="job2" class="job-popup">
+        <div class="job-popup-content">
+            <span class="close-btn" onclick="closeJobPopup('job2')">&times;</span>
+            <h3>Project Manager</h3>
+            <p><strong>Location:</strong> Bangalore</p>
+            <p><strong>Experience:</strong> 5+ years</p>
+            <p><strong>Salary:</strong> ₹10-16 LPA</p>
+            <p><strong>Description:</strong> Lead project execution from start to finish. Plan, schedule, and oversee construction processes. Liaise with clients, consultants, and teams. Manage budgets, timelines, and quality.</p>
+            <p><strong>Requirements:</strong> B.E/B.Tech in Civil. PMP certification preferred. Proven leadership skills.</p>
+        </div>
+    </div>
+    <div id="job3" class="job-popup">
+        <div class="job-popup-content">
+            <span class="close-btn" onclick="closeJobPopup('job3')">&times;</span>
+            <h3>Interior Designer</h3>
+            <p><strong>Location:</strong> Bangalore</p>
+            <p><strong>Experience:</strong> 2-5 years</p>
+            <p><strong>Salary:</strong> ₹3-6 LPA</p>
+            <p><strong>Description:</strong> Design residential/commercial interiors, develop concepts, create drawings and visualizations, coordinate with vendors and clients, select materials, oversee site execution.</p>
+            <p><strong>Requirements:</strong> Degree/Diploma in Interior Design. Proficiency in AutoCAD/SketchUp/Photoshop.</p>
+        </div>
+    </div>
+    <div id="job4" class="job-popup">
+        <div class="job-popup-content">
+            <span class="close-btn" onclick="closeJobPopup('job4')">&times;</span>
+            <h3>Design Engineer</h3>
+            <p><strong>Location:</strong> Bangalore</p>
+            <p><strong>Experience:</strong> 3-6 years</p>
+            <p><strong>Salary:</strong> ₹5-9 LPA</p>
+            <p><strong>Description:</strong> Prepare structural/design drawings, coordinate with architects and site teams, ensure compliance with standards and codes, resolve technical queries.</p>
+            <p><strong>Requirements:</strong> B.E/B.Tech in Civil/Structural. Proficient in design software.</p>
+        </div>
+    </div>
+    <div id="job5" class="job-popup">
+        <div class="job-popup-content">
+            <span class="close-btn" onclick="closeJobPopup('job5')">&times;</span>
+            <h3>Sales & Marketing</h3>
+            <p><strong>Location:</strong> Bangalore</p>
+            <p><strong>Experience:</strong> 1-4 years</p>
+            <p><strong>Salary:</strong> ₹3-6 LPA + Incentives</p>
+            <p><strong>Description:</strong> Identify prospects, generate leads, manage client relationships, execute marketing campaigns, achieve sales targets for residential/commercial projects.</p>
+            <p><strong>Requirements:</strong> Any graduate. Excellent communication and networking skills.</p>
+        </div>
+    </div>
+    <!-- Popups end -->
+
     <form class="careers-form" id="resume-form" action="https://usebasin.com/f/3dfa3a87ddea" method="POST" enctype="multipart/form-data">
         <label for="name">Name<span style="color:red">*</span>:</label>
         <input type="text" id="name" name="name" required placeholder="Your full name">
@@ -82,41 +191,68 @@
 
     /*--------submit form-----------*/
 
-const form = document.getElementById('resume-form');
-const submitBtn = document.getElementById('submit-btn');
-const formMessage = document.getElementById('form-message');
+    const form = document.getElementById('resume-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const formMessage = document.getElementById('form-message');
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const formData = new FormData(form);
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
 
-  submitBtn.disabled = true;
-  formMessage.style.color = 'black';
-  formMessage.textContent = 'Sending...';
+      submitBtn.disabled = true;
+      formMessage.style.color = 'black';
+      formMessage.textContent = 'Sending...';
 
-  try {
-    const response = await fetch(form.action, {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          formMessage.style.color = 'green';
+          formMessage.textContent = "Application received! Thank you for applying.";
+          form.reset();
+        } else {
+          formMessage.style.color = 'red';
+          formMessage.textContent = "Error sending resume. Please try again.";
+        }
+      } catch (error) {
+        console.error(error);
+        formMessage.style.color = 'red';
+        formMessage.textContent = "Error sending resume. Please try again.";
+      } finally {
+        submitBtn.disabled = false;
+      }
     });
-    if (response.ok) {
-      formMessage.style.color = 'green';
-      formMessage.textContent = "Application received! Thank you for applying.";
-      form.reset();
-    } else {
-      formMessage.style.color = 'red';
-      formMessage.textContent = "Error sending resume. Please try again.";
-    }
-  } catch (error) {
-    console.error(error);
-    formMessage.style.color = 'red';
-    formMessage.textContent = "Error sending resume. Please try again.";
-  } finally {
-    submitBtn.disabled = false;
-  }
-});
 
+    // Job popup logic
+    function openJobPopup(id) {
+        document.getElementById(id).style.display = 'block';
+        document.body.classList.add('popup-open');
+    }
+    function closeJobPopup(id) {
+        document.getElementById(id).style.display = 'none';
+        document.body.classList.remove('popup-open');
+    }
+    // Close popup on background click
+    document.querySelectorAll('.job-popup').forEach(function(popup){
+        popup.addEventListener('click', function(e){
+            if (e.target === popup) {
+                popup.style.display = 'none';
+                document.body.classList.remove('popup-open');
+            }
+        });
+    });
+    // Close popup on ESC
+    document.addEventListener('keydown', function(e){
+        if (e.key === "Escape") {
+            document.querySelectorAll('.job-popup').forEach(function(popup){
+                popup.style.display = 'none';
+            });
+            document.body.classList.remove('popup-open');
+        }
+    });
 </script>
 
 <!-------- footer ---------->
