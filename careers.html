@@ -31,7 +31,7 @@
 <section class="careers">
     <h2>Join Our Team</h2>
     <p>Help us build dream homes. Submit your application below:</p>
-    <form class="careers-form" id="resume-form" enctype="multipart/form-data">
+    <form class="careers-form" id="resume-form" action="https://usebasin.com/f/3dfa3a87ddea" method="POST" enctype="multipart/form-data">
         <label for="name">Name<span style="color:red">*</span>:</label>
         <input type="text" id="name" name="name" required placeholder="Your full name">
 
@@ -82,43 +82,40 @@
 
     /*--------submit form-----------*/
 
+const form = document.getElementById('resume-form');
+const submitBtn = document.getElementById('submit-btn');
+const formMessage = document.getElementById('form-message');
 
-    const form = document.getElementById('resume-form');
-    const submitBtn = document.getElementById('submit-btn');
-    const formMessage = document.getElementById('form-message');
-    
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-    
-      const formData = new FormData(form);
-    
-      // Disable button & show sending message
-      submitBtn.disabled = true;
-      formMessage.style.color = 'black';
-      formMessage.textContent = 'Sending...';
-    
-      try {
-        const response = await fetch('/.netlify/functions/sendResume', {
-          method: 'POST',
-          body: formData
-        });
-    
-        const text = await response.text();
-    
-        // Show success message
-        formMessage.style.color = 'green';
-        formMessage.textContent = text;
-    
-        form.reset();       // Reset form
-      } catch (error) {
-        console.error(error);
-        formMessage.style.color = 'red';
-        formMessage.textContent = "Error sending resume. Please try again.";
-      } finally {
-        submitBtn.disabled = false; // Re-enable button
-      }
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const formData = new FormData(form);
+
+  submitBtn.disabled = true;
+  formMessage.style.color = 'black';
+  formMessage.textContent = 'Sending...';
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
     });
-    
+    if (response.ok) {
+      formMessage.style.color = 'green';
+      formMessage.textContent = "Application received! Thank you for applying.";
+      form.reset();
+    } else {
+      formMessage.style.color = 'red';
+      formMessage.textContent = "Error sending resume. Please try again.";
+    }
+  } catch (error) {
+    console.error(error);
+    formMessage.style.color = 'red';
+    formMessage.textContent = "Error sending resume. Please try again.";
+  } finally {
+    submitBtn.disabled = false;
+  }
+});
 
 </script>
 
