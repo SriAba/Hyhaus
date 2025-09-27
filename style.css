@@ -343,24 +343,42 @@ h3{
 
 .testimonial-col {
   flex: 0 0 auto;
-  width: 300px; /* adjust per design */
+  width: 300px; /* adjust as needed */
   margin: 0 10px;
   padding: 20px;
   border-radius: 10px;
   background: #fff;
   display: flex;
   flex-direction: column;
-  min-height: 250px; /* keeps all cards same height */
+  min-height: 280px;   /* ensure equal height for all */
 }
 
 .testimonial-text {
+  flex-grow: 1;       /* text takes only available space */
   margin-bottom: 10px;
 }
 
 .testimonial-footer {
-  margin-top: auto;   /* pushes footer to bottom */
-  text-align: center;
+  margin-top: auto;   /* pins to bottom */
+  text-align: center; /* center align stars + name */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 60px;   /* force all footers same height */
 }
+
+.testimonial-footer .stars {
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: gold;  /* optional: make stars gold */
+}
+
+.testimonial-footer h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
 .testimonial-col img{
     height: 40px;
     margin-left: 5px;
@@ -940,6 +958,7 @@ h3{
         font-size: 24px;
     }
 }
+
 
 
 
