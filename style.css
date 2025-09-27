@@ -341,15 +341,25 @@ h3{
     text-align: center;
 }
 
-.testimonial-col{
-    flex-basis: 44%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-    background: #fff3f3;
-    padding: 25px;
-    cursor: pointer;
-    display: flex;
+.testimonial-col {
+  flex: 0 0 auto;
+  width: 300px;       /* adjust as needed */
+  margin: 0 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* pushes stars & name to bottom */
+  min-height: 250px;  /* ensures equal height cards */
+}
+.testimonial-text {
+  flex-grow: 1;   /* review text takes available space */
+  margin-bottom: 10px;
+}
+.testimonial-footer {
+  margin-top: auto;   /* pushes footer to bottom */
+  text-align: center;
 }
 .testimonial-col img{
     height: 40px;
@@ -376,7 +386,8 @@ h3{
     display: flex;
     width: max-content;
     animation: scroll 60s linear infinite;
-}.testimonial-col {
+}
+.testimonial-col {
     flex: 0 0 auto; /* width of each card */
     width: 300px;
     margin: 0 10px;
@@ -929,6 +940,7 @@ h3{
         font-size: 24px;
     }
 }
+
 
 
 
