@@ -343,20 +343,20 @@ h3{
 
 .testimonial-col {
   flex: 0 0 auto;
-  width: 300px;       /* adjust as needed */
+  width: 300px; /* adjust per design */
   margin: 0 10px;
   padding: 20px;
   border-radius: 10px;
   background: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* pushes stars & name to bottom */
-  min-height: 250px;  /* ensures equal height cards */
+  min-height: 250px; /* keeps all cards same height */
 }
+
 .testimonial-text {
-  flex-grow: 1;   /* review text takes available space */
   margin-bottom: 10px;
 }
+
 .testimonial-footer {
   margin-top: auto;   /* pushes footer to bottom */
   text-align: center;
@@ -940,6 +940,7 @@ h3{
         font-size: 24px;
     }
 }
+
 
 
 
