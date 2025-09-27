@@ -341,44 +341,16 @@ h3{
     text-align: center;
 }
 
-.testimonial-col {
-  flex: 0 0 auto;
-  width: 300px; /* adjust as needed */
-  margin: 0 10px;
-  padding: 20px;
-  border-radius: 10px;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  min-height: 280px;   /* ensure equal height for all */
+.testimonial-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
 }
-
-.testimonial-text {
-  flex-grow: 1;       /* text takes only available space */
-  margin-bottom: 10px;
-}
-
-.testimonial-footer {
-  margin-top: auto;   /* pins to bottom */
-  text-align: center; /* center align stars + name */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  min-height: 60px;   /* force all footers same height */
-}
-
-.testimonial-footer .stars {
-  margin-bottom: 5px;
-  font-size: 18px;
-  color: gold;  /* optional: make stars gold */
-}
-
-.testimonial-footer h3 {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 500;
-}
-
 .testimonial-col img{
     height: 40px;
     margin-left: 5px;
@@ -404,8 +376,7 @@ h3{
     display: flex;
     width: max-content;
     animation: scroll 60s linear infinite;
-}
-.testimonial-col {
+}.testimonial-col {
     flex: 0 0 auto; /* width of each card */
     width: 300px;
     margin: 0 10px;
@@ -958,10 +929,6 @@ h3{
         font-size: 24px;
     }
 }
-
-
-
-
 
 
 
