@@ -369,14 +369,17 @@ h3{
 }
 .carousel-container {
     overflow: hidden;
+    position: relative;
     width: 100%;
 }
 .carousel {
     display: flex;
+    gap: 20px;
     animation: scroll 30s linear infinite;
 }
 .testimonial-col {
-    flex: 0 0 300px; /* width of each card */
+    flex: 0 0 auto; /* width of each card */
+    width: 300px;
     margin: 10 15px;
     background: #f9f9f9;
     padding: 20px;
@@ -390,8 +393,8 @@ h3{
     margin-bottom: 10px;
 }
 @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); } /* scroll halfway (because we duplicate slides) */
 }
 
 @media(max-width:700px){
@@ -923,6 +926,7 @@ h3{
         font-size: 24px;
     }
 }
+
 
 
 
