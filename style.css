@@ -375,7 +375,7 @@ h3{
 .carousel {
     display: flex;
     width: max-content;
-    animation: scroll 40s linear infinite;
+    animation: scroll 60s linear infinite;
 }.testimonial-col {
     flex: 0 0 auto; /* width of each card */
     width: 300px;
@@ -929,6 +929,7 @@ h3{
         font-size: 24px;
     }
 }
+
 
 
 
